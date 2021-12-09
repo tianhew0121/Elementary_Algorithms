@@ -4,9 +4,9 @@
 #   n boxes. Box i has weight wi.
 #   We want to load the truck to carry the maximum weight
 #   possible, subject to the weight restriction.
-
-W = 100
-w = [0, 90, 90]
+from prettytable import PrettyTable
+W = 12
+w = [0, 9, 4, 7]
 OPT = None  # 2d matrix, n x W    n number of box, W weight limit of truck
 n = len(w)-1
 
@@ -47,3 +47,9 @@ def output_result(OPT, keep, i, j):
 
 OPT, keep = dynamic_load_truck(W, w, n)
 output_result(OPT, keep, n, W)
+x = PrettyTable()
+for row, k in zip(OPT, keep):
+    # x.add_row(row[1:])
+    x.add_row(row)
+    x.add_row(k)
+print(x)

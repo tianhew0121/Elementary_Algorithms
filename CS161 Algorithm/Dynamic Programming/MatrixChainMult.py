@@ -1,6 +1,6 @@
 from prettytable import PrettyTable
 #d = (40,2,100,50)
-d = (10, 15, 5, 60, 100, 20, 40, 47)
+d = (6, 14, 19, 4, 15, 17, 10)
 
 
 def matrix(row, col, val):
@@ -39,12 +39,8 @@ def optMatrixChain(d):
 
 M, S = optMatrixChain(d)
 x = PrettyTable()
-for row in M:
+for m_row, s_row in zip(M, S):
     # x.add_row(row[1:])
-    x.add_row(row)
-print(x)
-x = PrettyTable()
-for row in S:
-    # x.add_row(row[1:])
-    x.add_row(row)
+    x.add_row(m_row)
+    x.add_row(s_row)
 print(x)

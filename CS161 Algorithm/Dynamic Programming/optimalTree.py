@@ -1,6 +1,6 @@
 from prettytable import PrettyTable
 
-p = (0.26, 0.06, 0.24, 0.04, 0.16, 0.10, 0.14)
+p = (0.21, 0.33, 0.1, 0.04, 0.02, 0.13, 0.17)
 
 
 def draw_table(m):  # m is 2d array
